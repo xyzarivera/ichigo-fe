@@ -2,7 +2,7 @@
 
 [Confluence documentation](https://tokyotreat.atlassian.net/wiki/external/1591017766/NjE3MzhkNWMyNjU2NDg2ZmIxM2Y1YmRiODc1ZDJmZDg)
 
--   my step by step solution on this challenge can be seen as git commits in this project
+-   my step by step solution on this challenge can be seen as git commits in the `develop` branch in this project
 
 ## Set up
 
