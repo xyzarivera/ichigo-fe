@@ -25,3 +25,14 @@
     - created a new branch, `develop`
 
 3. Created `.eslintrc.js` for eslint rules, especially for TypeScript
+
+## Thoughts
+
+### Dynamic Color change
+
+-   I made the Box component, stateless and just receives props such as color for its background and an onClick function that changes the color of all the boxes.
+-   It's parent component, App, has the color state and the functions itself. Clicking on the Box component just triggers the function and does the color state change.
+
+### Display Behavior and responsive web design
+
+-   I've combined using flex and grid display to achieve the layout.
