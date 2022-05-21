@@ -1,14 +1,14 @@
 import * as React from "react";
 
 interface IAppProps {
-  input: string;
+  color: string;
 }
 
 const App: React.FunctionComponent<IAppProps> = (props) => {
-  const { input } = props;
+  const { color } = props;
   return (
     <div>
-      <p>Im a box? {input}</p>
+      <p>Im a box? {color}</p>
     </div>
   );
 };
