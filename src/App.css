@@ -1,12 +1,62 @@
 /* mobile view: <= 600px*/
 .App {
-    text-align: center;
-    font-size: 10px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.upper-half {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-template-rows: repeat(3, 3fr);
+    grid-gap: 5px;
+    grid-template-areas:
+        "one one"
+        "three four"
+        "two two";
+    padding: 5px;
+    padding-bottom: 2.5px;
+}
+
+.lower-half {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-template-rows: repeat(3, 3fr);
+    grid-gap: 5px;
+    grid-template-areas:
+        "seven seven"
+        "five eight"
+        "six nine";
+    padding: 5px;
+    padding-top: 2.5px;
 }
 
 /* desktop view: > 600px */
 @media (min-width: 601px) {
     .App {
         font-size: 50px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .upper-half {
+        display: grid;
+        grid-template-columns: repeat(4, 4fr);
+        grid-template-rows: repeat(2, 2fr);
+        grid-gap: 5px;
+        grid-template-areas:
+            "one one two two"
+            "one one three four";
+    }
+
+    .lower-half {
+        display: grid;
+        grid-template-columns: repeat(3, 3fr);
+        grid-template-rows: repeat(3, 3fr);
+        grid-gap: 5px;
+        grid-template-areas:
+            "five seven eight"
+            "six seven eight"
+            "six seven nine";
     }
 }
