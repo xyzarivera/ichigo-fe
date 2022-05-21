@@ -1,20 +1,23 @@
 import * as React from "react";
+import "./Box.css";
 
 interface IAppProps {
   color: string;
   onClick: () => void;
+  num: string;
+  gridArea: string;
 }
 
-export const defaultDivStyle: React.CSSProperties = {};
-
 const App: React.FunctionComponent<IAppProps> = (props) => {
-  const { color, onClick } = props;
+  const { color, onClick, num, gridArea } = props;
+
   return (
     <div
+      className={"box " + gridArea}
+      style={{ backgroundColor: color, gridArea: gridArea }}
       onClick={() => onClick()}
-      style={{ ...defaultDivStyle, backgroundColor: color }}
     >
-      <p>Im a box? {color}</p>
+      <p>{num}</p>
     </div>
   );
 };
