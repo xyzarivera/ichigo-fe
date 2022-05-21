@@ -4,7 +4,6 @@ import Box from "./components/Box";
 
 function App() {
   const totalBoxes = 9;
-  const [colors, setColors] = useState(generateColors(totalBoxes));
 
   function generateColors(num: number): string[] {
     const generated = [];
@@ -19,6 +18,7 @@ function App() {
     console.log({ colors });
   }
 
+  const [colors, setColors] = useState(generateColors(totalBoxes));
   return (
     <div className="App">
       <div className="upper-half">
