@@ -3,7 +3,8 @@ import "./App.css";
 import Box from "./components/Box";
 
 function App() {
-  const [colors, setColors] = useState(generateColors(9));
+  const totalBoxes = 9;
+  const [colors, setColors] = useState(generateColors(totalBoxes));
 
   function generateColors(num: number): string[] {
     const generated = [];
@@ -13,8 +14,8 @@ function App() {
     return generated;
   }
 
-  function changeColors(num: number): void {
-    setColors(generateColors(num));
+  function changeColors(): void {
+    setColors(generateColors(totalBoxes));
     console.log({ colors });
   }
 
