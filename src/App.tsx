@@ -3,8 +3,6 @@ import "./App.css";
 import Box from "./components/Box";
 
 function App() {
-  const totalBoxes = 9;
-
   function generateColors(num: number): string[] {
     const generated = [];
     for (let i = 0; i < num; i++) {
@@ -13,12 +11,14 @@ function App() {
     return generated;
   }
 
+  const totalBoxes = 9;
+  const [colors, setColors] = useState(generateColors(totalBoxes));
+
   function changeColors(): void {
     setColors(generateColors(totalBoxes));
-    console.log({ colors });
+    // console.log({ colors });
   }
 
-  const [colors, setColors] = useState(generateColors(totalBoxes));
   return (
     <div className="App">
       <div className="upper-half">
