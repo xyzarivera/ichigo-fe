@@ -1,19 +1,19 @@
 import * as React from "react";
 import "./Box.css";
 
-interface IAppProps {
+interface IBoxProps {
   color: string;
   onClick: () => void;
   num: string;
   gridArea: string;
 }
 
-const App: React.FunctionComponent<IAppProps> = (props) => {
+const Box: React.FunctionComponent<IBoxProps> = (props) => {
   const { color, onClick, num, gridArea } = props;
 
   return (
     <div
-      className={"box " + gridArea}
+      className="box"
       style={{ backgroundColor: color, gridArea: gridArea }}
       onClick={() => onClick()}
     >
@@ -22,4 +22,4 @@ const App: React.FunctionComponent<IAppProps> = (props) => {
   );
 };
 
-export default App;
+export default Box;

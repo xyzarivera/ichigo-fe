@@ -26,13 +26,26 @@
 
 3. Created `.eslintrc.js` for eslint rules, especially for TypeScript
 
-## Thoughts
+## Thought Process
+
+-   I decided to create a reusable stateless component for the boxes that can be customed based on the given behavior and layout
 
 ### Dynamic Color change
 
--   I made the Box component, stateless and just receives props such as color for its background and an onClick function that changes the color of all the boxes.
--   It's parent component, App, has the color state and the functions itself. Clicking on the Box component just triggers the function and does the color state change.
+-   created a stateless Box component, `Box.tsx` that receives these props: `color`, `onClick`, `gridArea`
+    -   `onClick` is a callback function that excutes when the Box component is cliked
+    -   `color` is a string for the hex color of the box component
+    -   `gridArea` is a string for the CSS grid-area name for that specific Box component
+-   These props are supplied by the state of its parent component, `App.tsx`
+    -   `changeColors` function is the supplied callback function to the Box component
+    -   `colors` is an array of hex colors generated from the `changeColors`, initially by `generateColors` on render
 
 ### Display Behavior and responsive web design
 
--   I've combined using flex and grid display to achieve the layout.
+-   Initially, I thought using CSS Flex would suffice but based on the given layout, using also CSS Grid can be easier to implement the given design. It also makes the box sizes uniform.
+
+## Demo
+
+[Link to Demo](https://luminous-cascaron-01796f.netlify.app/)
+
+-   I tried using CodeSandbox to host my demo, however, it sends me an CORS issue. It maybe because of my project set up, but to time constraints, I decided to host my demo in Netlify.
