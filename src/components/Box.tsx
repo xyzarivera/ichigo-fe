@@ -13,7 +13,7 @@ const App: React.FunctionComponent<IAppProps> = (props) => {
 
   return (
     <div
-      className={"box " + gridArea}
+      className="box"
       style={{ backgroundColor: color, gridArea: gridArea }}
       onClick={() => onClick()}
     >
