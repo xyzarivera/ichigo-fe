@@ -43,3 +43,9 @@
 ### Display Behavior and responsive web design
 
 -   Initially, I thought using CSS Flex would suffice but based on the given layout, using also CSS Grid can be easier to implement the given design. It also makes the box sizes uniform.
+
+## Demo
+
+[Link to Demo](https://luminous-cascaron-01796f.netlify.app/)
+
+-   I tried using CodeSandbox to host my demo, however, it sends me an CORS issue. It maybe because of my project set up, but to time constraints, I decided to host my demo in Netlify.
