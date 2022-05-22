@@ -6,11 +6,13 @@ function App() {
   function generateColors(num: number): string[] {
     const generated = [];
     for (let i = 0; i < num; i++) {
+      // genereate HEX color value
       generated.push("#" + Math.floor(Math.random() * 16777215).toString(16));
     }
     return generated;
   }
 
+  // initialize first colors to display
   const totalBoxes = 9;
   const [colors, setColors] = useState(generateColors(totalBoxes));
 
