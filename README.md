@@ -22,7 +22,11 @@
 
     - created a new branch, `develop`
 
-3. Created `.eslintrc.js` for eslint rules, especially for TypeScript
+3. Installed linters and created `.eslintrc.js` for eslint rules
+
+    ```
+    npm i -D eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-react prettier eslint-config-prettier eslint-plugin-prettier
+    ```
 
 ## Thought Process
 
